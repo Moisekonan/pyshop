@@ -1,0 +1,97 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Inscription - PyShop</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'authentify/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link href="{% static 'authentify/vendor/fonts/circular-std/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'authentify/libs/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'authentify/vendor/fonts/fontawesome/css/fontawesome-all.css' %}">
+    <style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        background-color: #f58634;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .btn-register{
+        background-color: #f58634;
+        color:#fff!important;
+        border-radius:.2rem;
+        font-size:17px;
+        letter-spacing: 1px;
+        transition: all 0.3s ease 0s;
+        line-height: normal;
+    }
+    a:hover{
+        color:#f58634;
+    }
+    a{
+        color:#f58634;
+    }
+    div.card{
+        border-radius:3rem;
+    }
+    </style>
+</head>
+<!-- ============================================================== -->
+<!-- signup form  -->
+<!-- ============================================================== -->
+
+<body>
+    <!-- ============================================================== -->
+    <!-- signup form  -->
+    <!-- ============================================================== -->
+    <form class="splash-container">
+        <div class="card">
+            <div class="card-header text-center">
+                <a href="{% url 'client_accueil' %}">
+                    <img class="logo-img" src="{% static 'logo.png' %}" alt="logo" width="200">
+                </a>
+                <span class="splash-description"><h3 class="mb-1">Formulaire d'inscription</h3></span>
+                <p>Veuillez saisir vos informations d'utilisateur.</p>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <input class="form-control form-control-lg" type="text" name="nick" required="" placeholder="Nom d'utilisateur" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input class="form-control form-control-lg" type="email" name="email" required="" placeholder="E-mail" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input class="form-control form-control-lg" id="pass1" type="password" required="" placeholder="Mot de passe">
+                </div>
+                <div class="form-group">
+                    <input class="form-control form-control-lg" required="" placeholder="Confirmer">
+                </div>
+                <div class="form-group pt-2">
+                    <button class="btn btn-block btn-register" type="submit">Créer mon compte</button>
+                </div>
+                <div class="form-group">
+                    <label class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox"><span class="custom-control-label">En créant un compte, vous acceptez que les <a href="#">termes et conditions</a></span>
+                    </label>
+                </div>
+            </div>
+            <div class="card-footer bg-white">
+                <p>Déjà membre ? <a href="{% url 'auth_login' %}" class="">Connectez-vous ici.</a></p>
+            </div>
+        </div>
+    </form>
+</body>
+
+ 
+</html>

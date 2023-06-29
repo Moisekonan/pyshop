@@ -1,1 +1,89 @@
-LOGIN
+{% load static %}
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Connexion - PyShop</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'authentify/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link href="{% static 'authentify/vendor/fonts/circular-std/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'authentify/libs/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'authentify/vendor/fonts/fontawesome/css/fontawesome-all.css' %}">
+    <style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        background-color: #f58634;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .btn-login{
+        background-color: #f58634;
+        color:#fff!important;
+        border-radius:.2rem;
+        font-size:17px;
+        letter-spacing: 1px;
+        transition: all 0.3s ease 0s;
+        line-height: normal;
+    }
+    a:hover{
+        color:#f58634;
+    }
+    div.card{
+        border-radius:3rem;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- login page  -->
+    <!-- ============================================================== -->
+    <div class="splash-container">
+        <div class="card ">
+            <div class="card-header text-center"><a href="{% url 'client_accueil' %}"><img class="logo-img" src="{% static 'logo.png' %}" alt="logo" width="200"></a><span class="splash-description">Veuillez saisir vos informations d'utilisateur.</span></div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" id="username" type="text" placeholder="Nom d'utilisateur" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" id="password" type="password" placeholder="Mot de passe">
+                    </div>
+                    <div class="form-group">
+                        <label class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Se souvenir de moi</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-login btn-lg btn-block">Se connecter</button>
+                </form>
+            </div>
+            <div class="card-footer bg-white p-0  ">
+                <div class="card-footer-item card-footer-item-bordered">
+                    <a href="{% url 'auth_register' %}" class="footer-link mr-5">Créer un compte</a> 
+                    <a href="{% url 'auth_motdepasse_oublier' %}" class="footer-link">Mot de passe oublié</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- ============================================================== -->
+    <!-- end login page  -->
+    <!-- ============================================================== -->
+
+    <!-- Optional JavaScript -->
+    <script src="{% static 'authentify/vendor/jquery/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'authentify/vendor/bootstrap/js/bootstrap.bundle.js' %}"></script>
+</body>
+ 
+</html>

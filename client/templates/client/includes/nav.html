@@ -7,8 +7,8 @@
                 <div class="main-menu-wrap">
                     <!-- logo -->
                     <div class="site-logo">
-                        <a href="index.html">
-                            <img src="{% static 'client/img/logo.png' %}" alt="">
+                        <a href="{% url 'client_accueil' %}">
+                            <img src="{% static 'logo.png' %}" alt="" >
                         </a>
                     </div>
                     <!-- logo -->
@@ -16,26 +16,14 @@
                     <!-- menu start -->
                     <nav class="main-menu">
                         <ul>
-                            <li class="active" href="{% url 'client_accueil' %}"><a href="#">Accueil</a></li>
+                            <li class="active" href="{% url 'client_accueil' %}"><a href="{% url 'client_accueil' %}">Accueil</a></li>
                             <li><a href="{% url 'client_apropos' %}">Apropos</a></li>
-                            <li><a href="{% url 'client_arrivage' %}">Arrivages</a>
-                                <ul class="sub-menu">
-                                    <li><a href="{% url 'client_arrivage' %}">Arrivages</a></li>
-                                    <li><a href="{% url 'client_single_arrivage' %}">Arrivage uniques</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="{% url 'client_boutique' %}">Boutique</a></li>
                             <li><a href="{% url 'client_contact' %}">Contact</a></li>
-                            <li><a href="{% url 'client_boutique' %}">Boutique</a>
-                                <ul class="sub-menu">
-                                    <li><a href="{% url 'client_boutique' %}">Boutique</a></li>
-                                    <li><a href="checkout.html">Check Out</a></li>
-                                    <li><a href="single-product.html">Single Product</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="{% url 'auth_login' %}">Connexion</a></li>
                             <li>
                                 <div class="header-icons">
-                                    <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                                    <a class="shopping-cart" href=""><i class="fas fa-shopping-cart"></i></a>
                                     <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
                                 </div>
                             </li>
@@ -59,9 +47,9 @@
                 <span class="close-btn"><i class="fas fa-window-close"></i></span>
                 <div class="search-bar">
                     <div class="search-bar-tablecell">
-                        <h3>Search For:</h3>
-                        <input type="text" placeholder="Keywords">
-                        <button type="submit">Search <i class="fas fa-search"></i></button>
+                        <h3>Recherche de :</h3>
+                        <input type="text" placeholder="Recherche...">
+                        <button type="submit">Recherche <i class="fas fa-search"></i></button>
                     </div>
                 </div>
             </div>

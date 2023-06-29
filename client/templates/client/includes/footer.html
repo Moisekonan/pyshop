@@ -5,17 +5,17 @@
         <div class="row">
             <div class="col-lg-3 col-md-6">
                 <div class="footer-box about-widget">
-                    <h2 class="widget-title">About us</h2>
+                    <h2 class="widget-title">Qui sommes-nous ?</h2>
                     <p>Ut enim ad minim veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="footer-box get-in-touch">
-                    <h2 class="widget-title">Get in Touch</h2>
+                    <h2 class="widget-title">Prendre contact</h2>
                     <ul>
-                        <li>34/8, East Hukupara, Gifirtok, Sadan.</li>
-                        <li>support@fruitkha.com</li>
-                        <li>+00 111 222 3333</li>
+                        <li>Angré Cocody, Abidjan, CIV.</li>
+                        <li>support@pyshop.com</li>
+                        <li>+225 07 06 58 77 89</li>
                     </ul>
                 </div>
             </div>
@@ -23,19 +23,18 @@
                 <div class="footer-box pages">
                     <h2 class="widget-title">Pages</h2>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Shop</a></li>
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="{% url 'client_accueil' %}">Accueil</a></li>
+                        <li><a href="{% url 'client_apropos' %}">Apropos</a></li>
+                        <li><a href="{% url 'client_boutique' %}">Boutique</a></li>
+                        <li><a href="{% url 'client_contact' %}">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="footer-box subscribe">
-                    <h2 class="widget-title">Subscribe</h2>
-                    <p>Subscribe to our mailing list to get the latest updates.</p>
-                    <form action="index.html">
+                    <h2 class="widget-title">S'abonner</h2>
+                    <p>Inscrivez-vous à notre liste de diffusion pour recevoir les dernières mises à jour.</p>
+                    <form action="{% url 'client_accueil' %}">
                         <input type="email" placeholder="Email">
                         <button type="submit"><i class="fas fa-paper-plane"></i></button>
                     </form>
@@ -51,8 +50,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12">
-                <p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.<br>
-                    Distributed By - <a href="https://themewagon.com/">Themewagon</a>
+                <p>Droits d'auteur &copy; <script>document.write(new Date().getFullYear())</script> - <a href="https://github.com/Moisekonan/Pyshop" target="_blank">Le Mental, 6.23</a>, Tous droits réservés.<br>
+                    Distribué par - <a href="https://nan.ci/" target="_blank">NaN</a>
                 </p>
             </div>
             <div class="col-lg-6 text-right col-md-12">
